@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CP VIHOUTOU — Excellence · Discipline · Avenir" />
+  <title>Contact | CP VIHOUTOU</title>
+  <!-- Design System -->
+  <link rel="stylesheet" href="../../css/main.css" />
+  <link rel="stylesheet" href="../../css/components.css" />
+  <link rel="stylesheet" href="../../css/animations.css" />
+  <link rel="stylesheet" href="../../css/responsive.css" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══════════ HEADER SITE ═══════════ -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="../../index.html" class="site-logo">
+        <img src="../../assets/logos/logo.png" alt="CP VIHOUTOU" onerror="this.style.display='none'" />
+        <span class="logo-text">CP VIHOUTOU</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <ul class="nav-list">
+          <li><a href="../../index.html">Accueil</a></li>
+          <li class="has-dropdown">
+            <a href="../../pages/about/index.html">À propos <i class="fa fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="../../pages/about/history.html">Histoire</a></li>
+              <li><a href="../../pages/about/vision-mission.html">Vision & Mission</a></li>
+              <li><a href="../../pages/about/governance.html">Gouvernance</a></li>
+              <li><a href="../../pages/about/values.html">Valeurs</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="../../pages/academics/index.html">Académique <i class="fa fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="../../pages/academics/kindergarten.html">Maternelle</a></li>
+              <li><a href="../../pages/academics/primary.html">Primaire</a></li>
+              <li><a href="../../pages/academics/college.html">Collège</a></li>
+              <li><a href="../../pages/academics/high-school.html">Lycée</a></li>
+              <li><a href="../../pages/academics/results.html">Résultats</a></li>
+            </ul>
+          </li>
+          <li><a href="../../pages/admissions/index.html">Admissions</a></li>
+          <li><a href="../../pages/news/index.html">Actualités</a></li>
+          <li><a href="../../pages/events/index.html">Événements</a></li>
+          <li><a href="../../pages/gallery/index.html">Galerie</a></li>
+          <li><a href="../../pages/contacts/index.html">Contact</a></li>
+          <li><a href="../../community/index.html">Communauté</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="../../auth/login.html" class="btn btn-outline btn-sm">Connexion</a>
+        <a href="../../pages/admissions/pre-registration.html" class="btn btn-primary btn-sm">Préinscription</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-header-title">Nous contacter</h1>
+      <p class="page-header-sub">Nous sommes à votre écoute.</p>
+      <div class="breadcrumb">
+        <a href="../../index.html">Accueil</a>
+        <span>/</span>
+        <span>Nous contacter</span>
+      </div>
+    </div>
+  </div>
+  <main>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2" style="gap:3rem;align-items:start">
+          <div>
+            <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:2rem">Envoyez-nous un message</h2>
+            <div id="form-alert"></div>
+            <form id="contact-form">
+              <div class="form-group">
+                <label class="form-label">Nom complet *</label>
+                <input type="text" name="name" class="form-control" required placeholder="Votre nom et prénom" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email *</label>
+                <input type="email" name="email" class="form-control" required placeholder="votre@email.com" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Téléphone</label>
+                <input type="tel" name="phone" class="form-control" placeholder="+XXX XX XX XX XX" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Sujet *</label>
+                <select name="subject" class="form-control" required>
+                  <option value="">-- Choisir un sujet --</option>
+                  <option>Renseignement général</option>
+                  <option>Inscription / Préinscription</option>
+                  <option>Scolarité et frais</option>
+                  <option>Partenariat</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Message *</label>
+                <textarea name="content" class="form-control" rows="5" required placeholder="Votre message..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%">
+                <i class="fas fa-paper-plane"></i> Envoyer le message
+              </button>
+            </form>
+          </div>
+          <div>
+            <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:2rem">Informations pratiques</h2>
+            <div style="display:flex;flex-direction:column;gap:1.5rem">
+              <div style="display:flex;gap:1rem;align-items:flex-start">
+                <div style="width:44px;height:44px;background:rgba(26,74,138,.1);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <i class="fas fa-map-marker-alt" style="color:var(--color-primary)"></i>
+                </div>
+                <div>
+                  <strong>Adresse</strong><br>
+                  <span style="color:var(--color-gray-600)">À compléter — Ville, Pays</span>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:flex-start">
+                <div style="width:44px;height:44px;background:rgba(26,74,138,.1);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <i class="fas fa-phone" style="color:var(--color-primary)"></i>
+                </div>
+                <div>
+                  <strong>Téléphone</strong><br>
+                  <span style="color:var(--color-gray-600)">+XXX XX XX XX XX</span>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:flex-start">
+                <div style="width:44px;height:44px;background:rgba(26,74,138,.1);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <i class="fas fa-envelope" style="color:var(--color-primary)"></i>
+                </div>
+                <div>
+                  <strong>Email</strong><br>
+                  <span style="color:var(--color-gray-600)">contact@cpvihoutou.site</span>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:flex-start">
+                <div style="width:44px;height:44px;background:rgba(26,74,138,.1);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <i class="fas fa-clock" style="color:var(--color-primary)"></i>
+                </div>
+                <div>
+                  <strong>Horaires d'accueil</strong><br>
+                  <span style="color:var(--color-gray-600)">Lundi – Vendredi : 7h30 – 17h30<br>Samedi : 8h00 – 12h00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════ FOOTER SITE ═══════════ -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">CP VIHOUTOU</span>
+          <p>Excellence · Discipline · Avenir</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="../../pages/about/index.html">À propos</a></li>
+            <li><a href="../../pages/academics/index.html">Académique</a></li>
+            <li><a href="../../pages/admissions/index.html">Admissions</a></li>
+            <li><a href="../../pages/news/index.html">Actualités</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="../../pages/downloads/index.html">Téléchargements</a></li>
+            <li><a href="../../pages/faq/index.html">FAQ</a></li>
+            <li><a href="../../pages/legal/privacy-policy.html">Confidentialité</a></li>
+            <li><a href="../../pages/legal/terms-of-use.html">Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Adresse de l'établissement</p>
+          <p><i class="fas fa-phone"></i> +XXX XX XX XX XX</p>
+          <p><i class="fas fa-envelope"></i> contact@cpvihoutou.site</p>
+          <p><i class="fas fa-clock"></i> Lun–Ven : 7h30–17h30</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CP VIHOUTOU. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- ═══════════ SCRIPTS ═══════════ -->
+  <script src="../../js/supabase-client.js"></script>
+  <script src="../../js/auth.js"></script>
+  <script src="../../js/navigation.js"></script>
+  <script src="../../js/main.js"></script>
+</body>
+</html>

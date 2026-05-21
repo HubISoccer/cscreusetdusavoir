@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CP VIHOUTOU — Excellence · Discipline · Avenir" />
+  <title>Tableau de bord — Admin | CP VIHOUTOU</title>
+  <!-- Design System -->
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <!-- ═══ SIDEBAR ADMIN ═══ -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-logo">
+        <span class="logo-text" style="color:white">CP VIHOUTOU</span>
+        <p style="font-size:.75rem;opacity:.5;margin-top:.25rem">Administration</p>
+      </div>
+      <nav class="admin-sidebar-nav">
+        <ul>
+          <li class="nav-section-title">Principal</li>
+          <li><a href="../admin/dashboard.html"><i class="fas fa-chart-line fa-fw"></i> Tableau de bord</a></li>
+          <li><a href="../admin/content.html"><i class="fas fa-file-alt fa-fw"></i> Contenus</a></li>
+          <li><a href="../admin/news.html"><i class="fas fa-newspaper fa-fw"></i> Actualités</a></li>
+          <li><a href="../admin/events.html"><i class="fas fa-calendar fa-fw"></i> Événements</a></li>
+          <li><a href="../admin/gallery.html"><i class="fas fa-images fa-fw"></i> Galerie</a></li>
+          <li class="nav-section-title">Gestion</li>
+          <li><a href="../admin/users.html"><i class="fas fa-users fa-fw"></i> Utilisateurs</a></li>
+          <li><a href="../admin/roles.html"><i class="fas fa-shield-alt fa-fw"></i> Rôles</a></li>
+          <li><a href="../admin/requests.html"><i class="fas fa-inbox fa-fw"></i> Demandes</a></li>
+          <li><a href="../admin/comments.html"><i class="fas fa-comments fa-fw"></i> Commentaires</a></li>
+          <li><a href="../admin/messages.html"><i class="fas fa-envelope fa-fw"></i> Messages</a></li>
+          <li class="nav-section-title">Paramètres</li>
+          <li><a href="../admin/subscriptions.html"><i class="fas fa-bell fa-fw"></i> Abonnements</a></li>
+          <li><a href="../admin/payments.html"><i class="fas fa-credit-card fa-fw"></i> Paiements</a></li>
+          <li><a href="../admin/seo.html"><i class="fas fa-search fa-fw"></i> SEO</a></li>
+          <li><a href="../admin/settings.html"><i class="fas fa-cog fa-fw"></i> Paramètres</a></li>
+          <li><a href="../admin/logs.html"><i class="fas fa-history fa-fw"></i> Logs</a></li>
+          <li><a href="../admin/database.html"><i class="fas fa-database fa-fw"></i> Base de données</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- ═══ MAIN ADMIN ═══ -->
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <h1 class="admin-page-title" style="margin:0;font-size:1.25rem">Tableau de bord</h1>
+        <div style="display:flex;align-items:center;gap:1rem">
+          <a href="../index.html" target="_blank" class="btn btn-ghost btn-sm"><i class="fas fa-eye"></i> Voir le site</a>
+          <button class="btn btn-outline btn-sm" onclick="logoutAdmin()"><i class="fas fa-sign-out-alt"></i> Déconnexion</button>
+        </div>
+      </header>
+      <div class="admin-content">
+
+        <!-- Stats rapides -->
+        <div class="admin-stats-grid">
+          <div class="admin-stat-card">
+            <div class="admin-stat-icon blue"><i class="fas fa-users"></i></div>
+            <div>
+              <div class="admin-stat-value" id="stat-users">—</div>
+              <div class="admin-stat-label">Utilisateurs</div>
+            </div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-icon gold"><i class="fas fa-newspaper"></i></div>
+            <div>
+              <div class="admin-stat-value" id="stat-news">—</div>
+              <div class="admin-stat-label">Articles publiés</div>
+            </div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-icon green"><i class="fas fa-inbox"></i></div>
+            <div>
+              <div class="admin-stat-value" id="stat-requests">—</div>
+              <div class="admin-stat-label">Demandes en attente</div>
+            </div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-icon red"><i class="fas fa-comments"></i></div>
+            <div>
+              <div class="admin-stat-value" id="stat-comments">—</div>
+              <div class="admin-stat-label">Commentaires à modérer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions rapides -->
+        <div style="background:var(--color-white);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow);margin-bottom:2rem">
+          <h3 style="font-weight:700;margin-bottom:1rem">Actions rapides</h3>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+            <a href="news.html" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Nouvel article</a>
+            <a href="events.html" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Nouvel événement</a>
+            <a href="gallery.html" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Ajouter photo</a>
+            <a href="requests.html" class="btn btn-outline btn-sm"><i class="fas fa-inbox"></i> Voir les demandes</a>
+            <a href="users.html" class="btn btn-outline btn-sm"><i class="fas fa-users"></i> Gérer les comptes</a>
+            <a href="settings.html" class="btn btn-ghost btn-sm"><i class="fas fa-cog"></i> Paramètres</a>
+          </div>
+        </div>
+
+        <!-- Derniers articles -->
+        <div class="data-table-wrap">
+          <div class="data-table-header">
+            <h3 style="font-weight:700">Dernières actualités</h3>
+            <a href="news.html" class="btn btn-primary btn-sm">Gérer les articles</a>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Titre</th><th>Catégorie</th><th>Statut</th><th>Date</th><th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="recent-news-table">
+              <tr><td colspan="5" class="loading-state"><div class="loader"></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="../js/supabase-client.js" type="module"></script>
+  <script src="../js/admin.js" type="module"></script>
+  <script>
+    async function logoutAdmin() {
+      const { supabase } = await import('../js/supabase-client.js')
+      await supabase.auth.signOut()
+      window.location.href = '../admin/login.html'
+    }
+  </script>
+</body>
+</html>
+  <script type="module">
+    import { guardAdmin, fetchAll } from '../js/admin.js'
+    import { supabase } from '../js/supabase-client.js'
+    async function init() {
+      await guardAdmin()
+      // Stats
+      const [users, news, requests, comments] = await Promise.all([
+        supabase.from('profiles').select('id', {count:'exact',head:true}),
+        supabase.from('news').select('id', {count:'exact',head:true}).eq('published',true),
+        supabase.from('requests').select('id', {count:'exact',head:true}).eq('status','pending'),
+        supabase.from('comments').select('id', {count:'exact',head:true}).eq('approved',false)
+      ])
+      document.getElementById('stat-users').textContent = users.count ?? 0
+      document.getElementById('stat-news').textContent = news.count ?? 0
+      document.getElementById('stat-requests').textContent = requests.count ?? 0
+      document.getElementById('stat-comments').textContent = comments.count ?? 0
+      // Articles récents
+      const articles = await fetchAll('news', {select:'id,title,category,published,created_at', limit:5})
+      const tbody = document.getElementById('recent-news-table')
+      if (!articles.length) {
+        tbody.innerHTML = '<tr><td colspan="5" class="empty-state">Aucun article</td></tr>'
+        return
+      }
+      tbody.innerHTML = articles.map(a => `
+        <tr>
+          <td style="font-weight:600">${a.title}</td>
+          <td><span class="badge badge-primary">${a.category || '—'}</span></td>
+          <td><span class="badge ${a.published ? 'badge-success' : 'badge-gray'}">${a.published ? 'Publié' : 'Brouillon'}</span></td>
+          <td class="news-card-date">${new Date(a.created_at).toLocaleDateString('fr-FR')}</td>
+          <td class="actions">
+            <a href="news.html?id=${a.id}" class="btn btn-ghost btn-sm"><i class="fas fa-edit"></i></a>
+          </td>
+        </tr>`).join('')
+    }
+    init()
+  </script>

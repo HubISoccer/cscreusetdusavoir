@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CP VIHOUTOU — Excellence · Discipline · Avenir" />
+  <title>Connexion | CP VIHOUTOU</title>
+  <!-- Design System -->
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <a href="../index.html"><span class="logo-text">CP VIHOUTOU</span></a>
+      </div>
+      <h1 class="auth-title">Connexion</h1>
+      <p class="auth-subtitle">Accédez à votre espace personnel.</p>
+      <div id="auth-alert"></div>
+      <form id="login-form">
+        <div class="form-group">
+          <label class="form-label" for="email">Adresse email</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="vous@example.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;margin-top:.5rem" id="login-btn">
+          Se connecter
+        </button>
+      </form>
+      <div style="text-align:center;margin-top:1.5rem;font-size:.875rem;color:var(--color-gray-600)">
+        <a href="../auth/forgot-password.html" style="color:var(--color-primary)">Mot de passe oublié ?</a>
+        <br><br>
+        Pas encore de compte ?
+        <a href="../auth/register.html" style="color:var(--color-primary);font-weight:600">Créer un compte</a>
+      </div>
+    </div>
+  </div>
+  <script type="module">
+    import { loginUser, redirectToDashboard } from '../js/auth.js'
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault()
+      const btn = document.getElementById('login-btn')
+      btn.disabled = true; btn.textContent = 'Connexion...'
+      const email = document.getElementById('email').value
+      const password = document.getElementById('password').value
+      try {
+        const { user } = await loginUser({ email, password })
+        await redirectToDashboard(user.id)
+      } catch(err) {
+        const a = document.getElementById('auth-alert')
+        a.innerHTML = `<div class="alert alert-danger"><i class="fas fa-exclamation-circle"></i> ${err.message}</div>`
+        btn.disabled = false; btn.textContent = 'Se connecter'
+      }
+    })
+  </script>
+  <script src="../js/main.js" type="module"></script>
+</body>
+</html>

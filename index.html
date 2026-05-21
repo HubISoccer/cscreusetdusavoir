@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CP VIHOUTOU — Excellence · Discipline · Avenir" />
+  <title>Accueil — CP VIHOUTOU | CP VIHOUTOU</title>
+  <!-- Design System -->
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══════════ HEADER SITE ═══════════ -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="./index.html" class="site-logo">
+        <img src="./assets/logos/logo.png" alt="CP VIHOUTOU" onerror="this.style.display='none'" />
+        <span class="logo-text">CP VIHOUTOU</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <ul class="nav-list">
+          <li><a href="./index.html">Accueil</a></li>
+          <li class="has-dropdown">
+            <a href="./pages/about/index.html">À propos <i class="fa fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="./pages/about/history.html">Histoire</a></li>
+              <li><a href="./pages/about/vision-mission.html">Vision & Mission</a></li>
+              <li><a href="./pages/about/governance.html">Gouvernance</a></li>
+              <li><a href="./pages/about/values.html">Valeurs</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="./pages/academics/index.html">Académique <i class="fa fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="./pages/academics/kindergarten.html">Maternelle</a></li>
+              <li><a href="./pages/academics/primary.html">Primaire</a></li>
+              <li><a href="./pages/academics/college.html">Collège</a></li>
+              <li><a href="./pages/academics/high-school.html">Lycée</a></li>
+              <li><a href="./pages/academics/results.html">Résultats</a></li>
+            </ul>
+          </li>
+          <li><a href="./pages/admissions/index.html">Admissions</a></li>
+          <li><a href="./pages/news/index.html">Actualités</a></li>
+          <li><a href="./pages/events/index.html">Événements</a></li>
+          <li><a href="./pages/gallery/index.html">Galerie</a></li>
+          <li><a href="./pages/contacts/index.html">Contact</a></li>
+          <li><a href="./community/index.html">Communauté</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="./auth/login.html" class="btn btn-outline btn-sm">Connexion</a>
+        <a href="./pages/admissions/pre-registration.html" class="btn btn-primary btn-sm">Préinscription</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+<main>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag">📚 Établissement scolaire privé</span>
+        <h1 class="hero-title">Bienvenue à <span class="accent">CP VIHOUTOU</span></h1>
+        <p class="hero-subtitle">Excellence · Discipline · Avenir — Former les esprits d'aujourd'hui pour les leaders de demain.</p>
+        <div class="hero-actions">
+          <a href="./pages/admissions/pre-registration.html" class="btn btn-accent btn-lg">
+            <i class="fas fa-pen-to-square"></i> Préinscription 2025–2026
+          </a>
+          <a href="./pages/about/index.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5);color:white">
+            Découvrir l'école
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ STATS ═══ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-count="1200" data-suffix="+">0</div>
+          <div class="stat-label">Élèves scolarisés</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="60" data-suffix="+">0</div>
+          <div class="stat-label">Enseignants qualifiés</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="95" data-suffix="%">0</div>
+          <div class="stat-label">Taux de réussite au BAC</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="20" data-suffix=" ans">0</div>
+          <div class="stat-label">D'expérience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ NIVEAUX ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Notre offre pédagogique</span>
+        <h2 class="section-title">Tous les cycles de la maternelle au lycée</h2>
+        <p class="section-subtitle">Un parcours scolaire complet, du premier âge jusqu'au baccalauréat.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card reveal">
+          <div class="card-body" style="text-align:center">
+            <div style="font-size:2.5rem;margin-bottom:1rem">🌱</div>
+            <h3 class="card-title">Maternelle</h3>
+            <p class="card-text">Éveil, jeux éducatifs, socialisation et développement de la curiosité.</p>
+            <a href="./pages/academics/kindergarten.html" class="btn btn-outline btn-sm" style="margin-top:1rem">En savoir plus</a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-body" style="text-align:center">
+            <div style="font-size:2.5rem;margin-bottom:1rem">📖</div>
+            <h3 class="card-title">Primaire</h3>
+            <p class="card-text">Lecture, écriture, calcul et fondations solides pour la réussite future.</p>
+            <a href="./pages/academics/primary.html" class="btn btn-outline btn-sm" style="margin-top:1rem">En savoir plus</a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-body" style="text-align:center">
+            <div style="font-size:2.5rem;margin-bottom:1rem">🔬</div>
+            <h3 class="card-title">Collège</h3>
+            <p class="card-text">Approfondissement des disciplines, culture générale et méthode de travail.</p>
+            <a href="./pages/academics/college.html" class="btn btn-outline btn-sm" style="margin-top:1rem">En savoir plus</a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-body" style="text-align:center">
+            <div style="font-size:2.5rem;margin-bottom:1rem">🎓</div>
+            <h3 class="card-title">Lycée</h3>
+            <p class="card-text">Séries A, C, D — Préparation rigoureuse au baccalauréat.</p>
+            <a href="./pages/academics/high-school.html" class="btn btn-outline btn-sm" style="margin-top:1rem">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ACTUALITÉS ═══ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">La vie de l'école</span>
+        <h2 class="section-title">Dernières actualités</h2>
+      </div>
+      <div class="grid grid-3" id="latest-news">
+        <!-- Chargé dynamiquement via Supabase -->
+        <div class="skeleton skeleton-img"></div>
+        <div class="skeleton skeleton-img"></div>
+        <div class="skeleton skeleton-img"></div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem">
+        <a href="./pages/news/index.html" class="btn btn-primary">Toutes les actualités</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MOT DU DIRECTEUR ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:center;gap:4rem">
+        <div class="reveal">
+          <span class="section-label">Mot du Directeur</span>
+          <h2 class="section-title" style="text-align:left;margin-bottom:1.5rem">Une école bâtie sur l'excellence et les valeurs humaines</h2>
+          <p style="color:var(--color-gray-600);line-height:1.9;margin-bottom:1.5rem">
+            Chers parents, chers élèves, chers partenaires,<br><br>
+            CP VIHOUTOU est bien plus qu'un établissement scolaire. C'est un lieu où chaque enfant
+            est reconnu dans sa singularité, accompagné dans ses forces et encouragé à dépasser ses limites.
+          </p>
+          <p style="color:var(--color-gray-600);line-height:1.9;margin-bottom:2rem">
+            Notre ambition est de former des citoyens cultivés, responsables et capables de contribuer
+            positivement à leur société. Nous croyons fermement que la réussite scolaire et le développement
+            du caractère vont de pair.
+          </p>
+          <a href="./pages/about/word-from-director.html" class="btn btn-primary">Lire le message complet</a>
+        </div>
+        <div class="reveal" style="text-align:center">
+          <img src="./assets/images/director.jpg" alt="Mot du Directeur"
+               style="width:320px;height:400px;object-fit:cover;border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);margin:0 auto"
+               onerror="this.src='https://placehold.co/320x400/1A4A8A/fff?text=Directeur'" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ APPEL À L'ACTION ═══ -->
+  <section class="section" style="background:linear-gradient(135deg,var(--color-primary),var(--color-primary-light));color:white;text-align:center">
+    <div class="container">
+      <h2 style="font-size:var(--font-size-3xl);font-weight:800;margin-bottom:1rem">Inscrivez votre enfant dès maintenant</h2>
+      <p style="opacity:.85;font-size:var(--font-size-lg);margin-bottom:2.5rem;max-width:600px;margin-left:auto;margin-right:auto">
+        Les inscriptions pour l'année scolaire 2025–2026 sont ouvertes. Ne manquez pas votre place.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="./pages/admissions/pre-registration.html" class="btn btn-accent btn-lg">
+          <i class="fas fa-user-plus"></i> Préinscription en ligne
+        </a>
+        <a href="./pages/contacts/index.html" class="btn btn-lg" style="background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.4);color:white">
+          <i class="fas fa-phone"></i> Nous contacter
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <!-- ═══════════ FOOTER SITE ═══════════ -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">CP VIHOUTOU</span>
+          <p>Excellence · Discipline · Avenir</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="./pages/about/index.html">À propos</a></li>
+            <li><a href="./pages/academics/index.html">Académique</a></li>
+            <li><a href="./pages/admissions/index.html">Admissions</a></li>
+            <li><a href="./pages/news/index.html">Actualités</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="./pages/downloads/index.html">Téléchargements</a></li>
+            <li><a href="./pages/faq/index.html">FAQ</a></li>
+            <li><a href="./pages/legal/privacy-policy.html">Confidentialité</a></li>
+            <li><a href="./pages/legal/terms-of-use.html">Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Adresse de l'établissement</p>
+          <p><i class="fas fa-phone"></i> +XXX XX XX XX XX</p>
+          <p><i class="fas fa-envelope"></i> contact@cpvihoutou.site</p>
+          <p><i class="fas fa-clock"></i> Lun–Ven : 7h30–17h30</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CP VIHOUTOU. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- ═══════════ SCRIPTS ═══════════ -->
+  <script src="./js/supabase-client.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/navigation.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
