@@ -1,4 +1,4 @@
-# CP VIHOUTOU — Excellence · Discipline · Avenir
+# COMPLEXE SCOLAIRE LE CREUSET DU SAVOIR— Excellence · Discipline · Avenir
 
 Portail web institutionnel dynamique.
 
@@ -30,8 +30,8 @@ Dans `js/supabase-client.js`, remplace :
 
 ## Déploiement GitHub Pages
 1. `git init && git add . && git commit -m "Initial commit"`
-2. `git remote add origin https://github.com/TON_USER/cpvihoutou.git`
+2. `git remote add origin https://github.com/TON_USER/cscreusetdusavoir.git`
 3. `git push -u origin main`
 4. Dans GitHub → Settings → Pages → Source : main, dossier : /root
 
-Généré automatiquement par `generate_cpvihoutou.py`
+Généré automatiquement par `generate_cscreusetdusavoir.py`
